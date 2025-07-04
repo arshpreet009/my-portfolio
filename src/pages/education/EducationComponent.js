@@ -1,12 +1,10 @@
 import React, { Component } from "react";
 import Educations from "../../containers/education/Educations";
-import Certifications from "../../containers/certifications/Certifications";
 import CompetitiveSites from "../../components/competitiveSites/CompetitiveSites";
 import EducationImg from "./EducationImg";
 import { competitiveSites } from "../../portfolio";
-import { certifications } from "../../portfolio";
-import "./EducationComponent.css";
 import { Fade } from "react-reveal";
+import "./EducationComponent.css";
 
 class Education extends Component {
   render() {
@@ -24,16 +22,14 @@ class Education extends Component {
                   Education
                 </h1>
                 <h3 className="heading-sub-text" style={{ color: theme.text }}>
-                  Basic Qualification and Certifications
+                  Basic Qualifications
                 </h3>
+
                 <CompetitiveSites logos={competitiveSites.competitiveSites} />
               </div>
             </div>
           </Fade>
           <Educations theme={this.props.theme} />
-          {certifications.certifications.length > 0 ? (
-            <Certifications theme={this.props.theme} />
-          ) : null}
         </div>
       </div>
     );
